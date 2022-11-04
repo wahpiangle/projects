@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+}
+
+.header{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header-bar{
+    background-color: #1f2937;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px 80px 100px;
+}
+
+.header-top-left{
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-links{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    padding: 0px 100px 0px 0px;  
+    gap: 16px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #E5E7Eb;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #1f2937;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #F9FAF8;
+    font-size: 48px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.subtext{
+    display: flex;
+    margin-left: 100px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #E5E7Eb;
+    width:600px;
+}
+
+.signup-button button{
+    display: block;
+    margin-left: 100px;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #3882f6;
+    color:#E5E7Eb;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+}
+
+.header-image img{
+    float: right;
+    margin-left: auto;
+    aspect-ratio:initial;
+    width: 550px;
+    margin-bottom: 40px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    margin: 50px 0px 50px 0px;
+    align-self: center;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.content-image{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+.images img{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 3px solid #3882f6;
+}
+
+.image-text{
+    display: flex;
+    gap: 86px;
+}
+
+.image-text figcaption{
+    width:120px;
+    text-align: center;
+    overflow-wrap: normal;
+}
+.quote{
+    background-color: #E5E7Eb;
+}
