@@ -16,12 +16,18 @@ function getComputerChoice(){
             break;
     }
 }
+// Button player selection
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorBtn = document.querySelector('#scissors');
+var playerChoice;
+rockBtn.addEventListener('click',function(){
+    playerChoice = 'rock';});
+paperBtn.addEventListener('click',function(){
+    playerChoice = 'paper';});
+scissorBtn.addEventListener('click',function(){
+    playerChoice = 'scissors';})
 
-function getPlayerChoice(){
-    let playerChoice = prompt("Enter your choice");
-    let playerChoiceLower = playerChoice.toLowerCase();
-    return playerChoiceLower;
-}
 
 function playGame(choiceOfComputer, choiceOfPlayer){
     if (choiceOfComputer == choiceOfPlayer)
@@ -41,14 +47,8 @@ function playGame(choiceOfComputer, choiceOfPlayer){
     }
 }
 
-function gameOf5(){
-    
-    for (let i =0; i<5; i++)
-    {
-        playGame(getComputerChoice(),getPlayerChoice());
-        
-    }
-    alert("Player score is: " + playerScore + "\nComputer score is: " + computerScore);
+function isGameOver(){
+    return playerScore == 5 || computerScore == 5;
 }
-gameOf5();
+
 
