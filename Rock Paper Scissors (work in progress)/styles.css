@@ -22,7 +22,9 @@ body{
     justify-content: center;
     gap: 50px;
 }
-
+.selections button:hover{
+    transform: scale(1.2);
+}
 .selections button{
     width: 100px;
     font-size: 40px;

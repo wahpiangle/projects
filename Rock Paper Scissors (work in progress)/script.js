@@ -2,6 +2,19 @@ let computerScore = 0;
 let playerScore = 0;
 let roundWinner ='';
 
+//player selection
+const selectionBtns = document.querySelectorAll('button');
+selectionBtns.forEach(selectionBtns=> {
+    selectionBtns.addEventListener('click', e=> {
+        let playerChoice = selectionBtns.dataset.selection;
+        makeSelection(playerChoice)
+    })
+})
+
+function makeSelection(selection) {
+    console.log(selection);
+}
+
 function getComputerChoice(){
     let computerChoice = Math.floor(Math.random()*3)+1; //rng will be 1,2 or 3
     switch(computerChoice){
@@ -16,18 +29,6 @@ function getComputerChoice(){
             break;
     }
 }
-// Button player selection
-const rockBtn = document.querySelector('#rock');
-const paperBtn = document.querySelector('#paper');
-const scissorBtn = document.querySelector('#scissors');
-var playerChoice;
-rockBtn.addEventListener('click',function(){
-    playerChoice = 'rock';});
-paperBtn.addEventListener('click',function(){
-    playerChoice = 'paper';});
-scissorBtn.addEventListener('click',function(){
-    playerChoice = 'scissors';})
-
 
 function playGame(choiceOfComputer, choiceOfPlayer){
     if (choiceOfComputer == choiceOfPlayer)
