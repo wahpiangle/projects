@@ -9,13 +9,24 @@
     <div class="results" >
         <div id="banner">Choose Your Weapon!</div>
         <div class="choice-icons">
-            <div id="computerChoice"></div>
-            <div id="playerChoice"></div>
+            <div class="computerChoiceContainer">
+                <div id="computerChoice">?</div>
+            </div>
+            <div class = "playerChoiceContainer">
+                <div id="playerChoice">?</div>
+            </div>
         </div> 
         <div class="score-box">
-            <div id="player-score"></div>
-            <div id="computer-score"></div>
+            <div class="computer-score-container">
+                <div id="computer-score-banner">Computer Score:</div>
+                <div id="computer-score">0</div>
+            </div>
+            <div class="player-score-container">
+                <div id="your-score-banner">Your Score:</div>
+                <div id="player-score">0</div>
+            </div>
         </div>
+        <div id="result-banner"></div>
     </div>
     <div class="selections">
         <button id="rock" data-selection="rock">🌑</button>
