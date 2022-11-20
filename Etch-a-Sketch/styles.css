@@ -16,12 +16,22 @@ h1{
     border: none;
     background-color: dodgerblue;
 }
+#user-size-request:hover{
+    color: dodgerblue;
+    background-color: white;
+    border: 1px solid dodgerblue;
+}
+
 .grid-container{
-    border:1px solid black;
+    border:20px solid dodgerblue;
+    border-radius: 30px;
     display: grid;
     margin: 0 auto 20px auto;
     width: 500px;
     height: 500px;
+}
+.grid-container div{
+    border: 0.1px solid gray;
 }
 
 .reset-button-container{
@@ -36,4 +46,9 @@ h1{
     color: white;
     border: none;
     background-color:crimson;
+}
+#user-reset-request:hover{
+    color: crimson;
+    background-color: white;
+    border: 1px solid crimson;
 }

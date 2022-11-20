@@ -16,10 +16,11 @@ function createGrids(length){
         let div = document.createElement('div');
         div.addEventListener('mouseover', colorDiv)
         gridContainer.insertAdjacentElement("beforeend",div);
+        div.style.backgroundColor = 'lightgray';
     }
 }
 function colorDiv(){
-    this.style.backgroundColor='black';
+    this.style.backgroundColor='gray';
 }
 
 //get user size input from button
