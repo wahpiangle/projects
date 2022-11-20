@@ -1,9 +1,14 @@
+//mouseDown property to check if mouse is clicked
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 //16x16 grid upon loading of HTML
 document.addEventListener("DOMContentLoaded", function(){
     createGrids(16);
 })
 
-//function for creating the grids
+//function for creating the grids, adding change colour feature to div in grids
 let gridContainer = document.querySelector('.grid-container');
 function createGrids(length){
     gridContainer.style.gridTemplateColumns = `repeat(${length},1fr)`
@@ -14,12 +19,15 @@ function createGrids(length){
     for (let i =0; i<numDivs; i++)
     {
         let div = document.createElement('div');
-        div.addEventListener('mouseover', colorDiv)
+        div.addEventListener('mouseover', changeColor)
+        div.addEventListener('mousedown', changeColor)
         gridContainer.insertAdjacentElement("beforeend",div);
         div.style.backgroundColor = 'lightgray';
     }
 }
-function colorDiv(){
+//change colour function that only changes when mouse is clicked
+function changeColor(e){
+    if (e.type = 'mouseover' && !mouseDown) return;
     this.style.backgroundColor='gray';
 }
 
