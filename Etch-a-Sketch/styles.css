@@ -1,0 +1,39 @@
+
+h1{
+    text-align: center;
+}
+
+.size-button-container{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#user-size-request{
+    height:30px;
+    width: 100px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    background-color: dodgerblue;
+}
+.grid-container{
+    border:1px solid black;
+    display: grid;
+    margin: 0 auto 20px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.reset-button-container{
+    display:flex;
+    justify-content: center;
+}
+
+#user-reset-request{
+    height:30px;
+    width: 100px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    background-color:crimson;
+}
