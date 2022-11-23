@@ -46,7 +46,6 @@ function appendNumber(number) {
 const equalButton = document.querySelector('#equals');
 equalButton.addEventListener('click', () => evaluate());
 
-
 //operator feature
 const operatorButtons = document.querySelectorAll('[data-operator]');
 operatorButtons.forEach((button) =>
