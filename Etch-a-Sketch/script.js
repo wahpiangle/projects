@@ -22,7 +22,7 @@ function createGrids(length){
         div.addEventListener('mouseover', changeColor)
         div.addEventListener('mousedown', changeColor)
         gridContainer.insertAdjacentElement("beforeend",div);
-        div.style.backgroundColor = 'lightgray';
+        div.style.backgroundColor = 'white';
     }
 }
 //change colour function that only changes when mouse is clicked
