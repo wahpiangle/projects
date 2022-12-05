@@ -1,0 +1,130 @@
+body{
+    background-color: gray;
+}
+.container{
+    margin: 2% 15% 1% 15%;
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 20px;
+    min-width: 800px;
+    display: flex;
+    background-color: lightseagreen;
+}
+
+.imagediv{
+    display: inline-block;
+    border-radius: 8px;
+    margin: 2% 0 2% 2%;
+    height: 90vh;
+    min-width: 300px;
+    width: 50vh;
+    background-image: url("5927911.gif");
+}
+
+.form-container{
+    padding: 2% 4% 0 4%;
+    font-family: sans-serif;
+    min-width: 55%;
+}
+
+#form-header{
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 8px;
+    padding: 4% 0 4% 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold ;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+.inner-input-container{
+    min-width: 80%;
+    margin: 5% 0 5% 0;
+    padding: 2% 0 4% 4%;
+    font-family: 'Century Gothic', sans-serif;
+    background-color: rgba(128,128,128, 0.4);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+#input-header{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 2%; 
+}
+.inputs label{
+    font-size: 16px;
+}
+
+.inner-input-container input{
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    width: 95%;
+    height: 32px;
+    margin-bottom: 2%;
+    background-color: transparent;
+}
+
+.inner-input-container span{
+    position: absolute;
+    left: 0;
+    margin-left: 592px;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    padding: 7px;
+    font-size: 1em;
+}
+
+.inner-input-container input:valid + span,
+.inner-input-container input:focus + span{
+    color: #fff;
+    transform: translateX(10px) translateY(-7px);
+    transition: 250ms;
+    font-size: 0.7em;
+    padding: 0 10px;
+    background-color: rgb(70,158,153);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{ 
+    -webkit-box-shadow: 0 0 0 30px rgb(70,158,153) inset !important;
+    -webkit-text-fill-color: #fff;
+}
+
+#create-account-button{
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    border:2px solid  transparent;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+}
+
+#create-account-button:hover{
+    background-color: rgba(28, 196, 92, 0.4);
+    border-color: rgba(0, 0, 0, 0.6);
+    color: black;
+}
+
+#login-statement{
+    margin: 2% 0 0 0%;
+    font-weight: bold;
+    font-family: 'Century Gothic', sans-serif;
+}
+#login-statement a{
+    text-decoration: none;
+}
+
+#footer{
+    text-align: center;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+}

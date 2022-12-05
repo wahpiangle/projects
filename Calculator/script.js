@@ -105,9 +105,9 @@ function operate(operator, a, b){
             return null;
     }
 }
-//round result feature as there are random small decimals, only operations of 5 dp
+//round result feature as there are random small decimals, only operations of 6 dp
 function roundResult(number) {
-    return Math.round(number * 100000) / 100000;
+    return Math.round(number * 1000000) / 1000000;
   }
 
 //decimal feature
