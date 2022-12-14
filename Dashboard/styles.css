@@ -74,7 +74,7 @@
 }
 
 #bellicon{
-    background: url("bell-ring.png"), no-repeat;
+    background: url("images/bell-ring.png"), no-repeat;
     height: 24px;
     width: 24px;
     margin: 15px 30px 12px 20px;
@@ -82,7 +82,7 @@
 }
 
 #bellicon:hover{  
-    background: url("bell-ring-outline.png") no-repeat;
+    background: url("images/bell-ring-outline.png") no-repeat;
     height: 24px;
     width: 24px;
     margin: 15px 30px 12px 20px;
