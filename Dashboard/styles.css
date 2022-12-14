@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) 5fr;
+    grid-template-rows: 150px repeat(4, 1fr);
+    height: 100% !important;
+    width: 100% ;
+}
+.icon-container{
+    display: flex;
+}
+#iconpic{
+    width: 30px;
+    margin-top: 16px;
+    margin-left: 26px;
+    height: 30px;
+}
+.iconword{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding-top: 14px;
+    padding-left: 10px;
+}
+.sidebar{
+    background-color: #06b6d4;
+    display: grid;
+    grid-area: 1 / 1 / 6 / 2;   
+}
+.sidebar ul{
+    cursor: pointer;
+    padding-top: 5%;
+    padding-left: 10%;
+    list-style-type: none;
+}
+
+.sidebar li{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.header{
+    position:relative;
+    grid-area: 1 / 2 / 2 / 6;
+    height: 150px;
+    box-shadow: 0 8px 8px -2px rgb(199, 199, 199);
+    display: block;
+}
+.header > *{
+    flex-shrink: 0; /*prevent items from wrapping when page is shrunk*/
+}
+.headerline1{
+    display:flex;
+    flex-wrap: nowrap;
+}
+#searchicon{
+    margin: 23px 0 12px 30px;
+}
+#searchbar{
+    margin: 15px 120px 15px 10px;
+    height: 30px;
+    min-width: 550px;
+    padding-left: 1%;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+}
+
+#bellicon{
+    background: url("bell-ring.png"), no-repeat;
+    height: 24px;
+    width: 24px;
+    margin: 15px 30px 12px 20px;
+    cursor:pointer;
+}
+
+#bellicon:hover{  
+    background: url("bell-ring-outline.png") no-repeat;
+    height: 24px;
+    width: 24px;
+    margin: 15px 30px 12px 20px;
+    cursor:pointer;
+
+}
+
+#usericon{
+    height: 36px;
+    width: 36px;
+    margin: 10px 0 12px 60px;
+    cursor:pointer;
+}
+
+#username{
+    margin: 10px 0 12px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.headerline2{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.welcomebox{
+    display: grid;
+    margin: 0 200px 20px 20px;
+    grid-template-columns: 80px 320px;
+    grid-template-rows: 28px 32px;
+}
+
+#welcome-icon{
+    grid-area: 1/1/2/2;
+    width: 64px;
+    height: 64px;
+}
+
+#small-text{
+    padding-top: 4px;
+    grid-area: 1/2/2/2;
+}
+
+#user-details{
+    grid-area: 2/2/3/3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+a{
+    text-decoration: none;
+}
+
+.header-buttons ul{
+    display: flex;
+    flex-direction: row ;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-buttons button{
+    color: white;
+    background-color: #06b6d4;
+    padding: 10px 24px 10px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    margin: 20px 0 0 40px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.header-buttons button:hover{
+    background-color: white;
+    color: #06b6d4;
+    border: 1px solid #06b6d4;
+    box-shadow: none;
+}
+
+.content{
+    grid-area: 2/2/6/6;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #e2e2e2;
+}
+
+.projects{
+    display: grid;
+    grid-area: 1/1/3/2;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(2,376px);
+}
+
+.projects-header{
+    margin-left: 24px;
+    margin-top: 24px;
+    grid-area: 1/1/2/4;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.projects-content{
+    margin-left: 24px;
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: 2/1/3/4;
+}
+
+.projects-content >*{
+    background-color: white;
+    height: 220px;
+    width: 300px;
+    margin-bottom: 48px;
+    border-radius: 8px;
+    border-left: 4px solid #e98d04;
+    padding-top: 24px;
+    padding-left: 24px;
+    box-shadow: 3px 5px 4px gray;
+}
+
+#staricon1, #staricon2{
+    position: relative;
+    float:right;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-top: 130px;
+    width: 24px;
+    height: 24px;
+}
+
+#staricon1:hover{
+    opacity: 0;
+}
+
+#staricon2{
+    right: -36px;
+    opacity: 0;
+}
+
+#staricon2:hover{
+    opacity: 100;
+}
+
+#project-1-header, #project-2-header, #project-3-header, #project-4-header, #project-5-header, #project-6-header{
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+
+.announcements{
+    display: grid;
+    grid-area: 1/2/2/3;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 372px;
+    margin-top: 24px;
+}
+
+.announcements-header{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.announcements-contents{
+    padding: 24px 24px 0 24px;
+    grid-area: 2/1/2/3;
+    display: grid;
+    box-shadow: 3px 5px 4px gray;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.announcements-contents hr{
+    text-align: center;
+    margin: 12px auto 12px auto;
+    width: 100%;
+}
+
+#announcement1-header, #announcement2-header, #announcement3-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#announcement1-content, #announcement2-content, #announcement3-content{
+    font-size: 16px;
+}
+
+.trending{
+    margin-top: 36px;
+    display: grid;
+    grid-template-rows: 40px 1fr ;
+
+}
+
+.trending-header{
+    grid-area: 1/1/2/2;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.trending-content{
+    background-color: white;
+    width: 346px;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 3px 5px 4px gray;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 24px 0 0 24px;
+}
+
+.trending-content img{
+    width: 36px;
+    height: 36px;
+    margin-right: 24px;
+}
+.trending1, .trending2, .trending3, .trending4{
+    display: flex;
+}
+
+#trending1-header, #trending2-header, #trending3-header, #trending4-header{
+    font-weight: bold;
+}
+
+#trending1-text, #trending2-text, #trending3-text, #trending4-text{
+    color: gray;
+}
