@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div id="header-text">Library</div>
+    </div>
+    <div class="contents">
+        <div class="addbtn">+ Add Book</div>
+        <div class="books"></div>
+    </div>
+    <div class="popup">
+        <form id="form">
+            <div class="popup-title">Add new book</div>
+            <div class="cancel">x</div>
+            <input type="text" id="input-title" name="title" placeholder="Title" required><br>
+            <input type="text" id="input-author" name="author" placeholder="Author" required><br>
+            <input type="number" id="input-pages" name="pages" placeholder="Pages" min="1" required><br>
+            <label for="read">Read?</label>
+            <input type="checkbox" id="input-read" name="read"><br>
+            <div id="submit">Submit</div>
+        </form>
+    </div>
+    <div class="footer"><a href="https://github.com/wahpiangle/projects/">Copyright © 2022 Quan Ming</a></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
