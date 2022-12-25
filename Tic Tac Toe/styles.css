@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --orange: #f2c14e;
+    --winning-blocks: #2d414b;
+}
+
+body{
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+}
+
+h1{
+    font-size: 54px;
+}
+
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #37505C;
+}
+
+#gameboard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 100px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: #3d6779;
+}
+
+/*to remove the right border for every 3rd box*/
+.box:nth-child(3n){
+    border-right: none;
+}
+
+/*Subsequent siblings after child number 6, to remove their bottom border*/
+.box:nth-child(6) ~ .box{
+    border-bottom: none ;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*animation for button to move slightly up on hover*/
+button:hover{
+    transform: translateY(-1px);
+}
+
+
+
