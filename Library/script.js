@@ -1,12 +1,12 @@
 //Library array
 let myLibrary = [];
 
-//Book class
+//Book function to create objects
 function Book(Title, Author, Pages, Read){ 
-      this.Title = Title;
-      this.Author = Author;
-      this.Pages = Pages;
-      this.Read = Read;
+    this.Title = Title;
+    this.Author = Author;
+    this.Pages = Pages;
+    this.Read = Read;
 }
 
 
@@ -67,6 +67,7 @@ function displayBooks(){
       
     }
     index ++;
+
     card.appendChild(removeBookBtn); //putting remove button at the bottom
     //remove button onclick
     removeBookBtn.addEventListener("click", removeBook);
@@ -76,28 +77,29 @@ function displayBooks(){
       card.remove();
       displayBooks();
     }    
+    
+    const readStatus = card.querySelectorAll(".read-status");
+    readStatus.forEach(item => {item.addEventListener("click", function(){
+        toggleReadStatus(item);
+      });
+    });
 
     //to change the height to fill all the cards when there are more than 3 cards
     const container = document.querySelector(".contents")
     if(index >3){
     container.style.height = "max-content";
     }
-
-    const readStatus = document.querySelector(".read-status");
-    readStatus.addEventListener("click", toggleReadStatus);
-
-  function toggleReadStatus(){
-    if(readStatus.id === "status-read"){
-      readStatus.textContent = "Not Read";
-      readStatus.setAttribute("id", "status-notread");
-    }
-
-    else if(readStatus.id === "status-notread"){
-      readStatus.textContent = "Read"
-      readStatus.setAttribute("id", "status-read");
-    }
-  }
   })
+}
+
+function toggleReadStatus(readStatus){
+  if(readStatus.id === "status-read"){
+    readStatus.textContent = "Not Read";
+    readStatus.setAttribute("id", "status-notread");
+  } else if(readStatus.id === "status-notread"){
+    readStatus.textContent = "Read"
+    readStatus.setAttribute("id", "status-read");
+  }
 }
 
 //for the new book button to display the form
