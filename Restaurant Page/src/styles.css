@@ -1,0 +1,139 @@
+body{
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 1370px;
+    background-attachment: fixed;
+}
+
+.header-bar{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-title{
+    padding-top: 20px;
+    font-size: 42px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.header-selections{
+    font-size: 22px;
+}
+.header-selections ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-selections li{
+    cursor: pointer;
+    padding:20px 0 20px 0;
+    margin: 0 50px 10px 50px;
+    border-bottom: 2px solid transparent;
+}
+.header-selections li:hover{
+    transform: translateY(-4px);
+    transition: 200ms;
+    border-bottom: 2px solid white;
+}
+
+.container{
+    margin: 50px 0 100px 0;
+    padding: 50px 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 690px;
+    width: 60%;
+}
+
+.container>img{
+    margin: 20px 0px;
+    width: 380px;
+}
+
+#container-menu{
+    margin: 50px 0 100px 0;
+    padding: 10px 0 50px 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    min-width: 690px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-item{
+    margin: 20px 80px;
+    padding: 20px;
+    cursor: pointer;
+}
+.menu-item:hover{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+.menu-item>img{
+    width: 70%;
+    min-width: 180px;
+}
+
+.item-title{
+    font-weight: bold;
+}
+
+.item-description, .item-price{
+    font-size: 14px;
+}
+
+.address, .contact-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.address-title{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.whatsapp{
+    width: 24px;
+    margin-right: 10px;
+}
+
+.whatsapp, .contact-number{
+    cursor: pointer;
+}
+
+.google-map{
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+#footer{
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+#footer a{
+    text-decoration: none;
+    color: white;
+}

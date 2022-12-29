@@ -6,15 +6,9 @@ module.exports = {
     index: './src/index.js',
   },
   devtool: 'inline-source-map', //use of source map theat helps locate error on the actual source file
-  plugins: [ //plugin will replace the index.html file in the folder
-    new HtmlWebpackPlugin({
-      title: 'Restaurant Page',
-    }),
-  ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
   module: {
     rules: [
