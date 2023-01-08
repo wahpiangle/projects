@@ -8,13 +8,14 @@ function initialDom(){
     projectInfoDiv.classList.add("h1-title");
     //to get the title according to what is saved in localStorage
     const storedProject = JSON.parse(localStorage.getItem("project"));
-    if(storedProject[0] == "Default Project"){
-        projectInfoDiv.textContent =  "Default Project";
-    }
-    else{
-        projectInfoDiv.textContent = storedProject[0];
-    }
-    
+    if(storedProject){
+        if(storedProject[0] == "Default Project"){
+            projectInfoDiv.textContent =  "Default Project";
+        }
+        else{
+            projectInfoDiv.textContent = storedProject[0];
+        }
+}
     //to get the first project's name
     contentDiv.appendChild(projectInfoDiv);
 
@@ -134,7 +135,9 @@ function displayTask(task){
     dueDate.value = task.DueDate;
     dueDate.addEventListener('change', () => {
         task.DueDate = dueDate.value;
+        localStorage.setItem("tasks", JSON.stringify(toDoArray));
     })
+    console.log(toDoArray);
     //creating the remove button
     let removeButton = document.createElement("div");
     removeButton.textContent = "x";
@@ -145,7 +148,6 @@ function displayTask(task){
         //update localStorage when a task is deleted
         localStorage.setItem("tasks", JSON.stringify(toDoArray));
     });
-    console.log(toDoArray)
     createdTask.appendChild(dueDate);
     createdTask.appendChild(removeButton);
     taskContainer.appendChild(createdTask);

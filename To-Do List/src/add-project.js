@@ -100,6 +100,7 @@ function displayProject(project){
         e.stopPropagation();
         projectContainer.removeChild(createdProject);
         projectArray.splice(projectArray.indexOf(project), 1);
+        //call to clearOnView for if current project display is deleted
         clearOnView(project);
         //to update the localStorage
         localStorage.setItem("project", JSON.stringify(projectArray));
