@@ -6,26 +6,52 @@ function initialDom(){
     //DOM for loaded project
     const projectInfoDiv = document.createElement("h1");
     projectInfoDiv.classList.add("h1-title");
+    //to get the title according to what is saved in localStorage
+    const storedProject = JSON.parse(localStorage.getItem("project"));
+    if(storedProject[0] == "Default Project"){
+        projectInfoDiv.textContent =  "Default Project";
+    }
+    else{
+        projectInfoDiv.textContent = storedProject[0];
+    }
+    
     //to get the first project's name
-    projectInfoDiv.textContent =  "Default Project";
     contentDiv.appendChild(projectInfoDiv);
 
     const taskContainer = document.createElement("div");
     contentDiv.appendChild(taskContainer);
     taskContainer.classList.add("task-container");
-
+    
     const addTaskButton = document.createElement("button");
     addTaskButton.textContent = "+ Add Task";
     addTaskButton.classList.add("add-task");
     contentDiv.appendChild(addTaskButton);
+
+    //to not show addTaskButton if there are no projects
+    if (projectInfoDiv.textContent == ""){
+        addTaskButton.style.display = "none";
+    }
+}
+
+// retrieve the value from localStorage
+const storedValue = localStorage.getItem("tasks");
+// if there is a stored value, use it; otherwise, use the default value
+if (storedValue) {
+    toDoArray = JSON.parse(storedValue);
+} else {
+    toDoArray = [];
+    localStorage.setItem("tasks", JSON.stringify(toDoArray));
 }
 initialDom();
+
+
 const taskContainer = document.querySelector(".task-container");
 const addTaskButton = document.querySelector(".add-task");
 const addTaskInput = document.createElement("input");
 const addTaskConfirmButton = document.createElement("div");
 const addTaskCancelButton = document.createElement("div");
 const projectInfo = document.querySelector(".h1-title");
+displayTasks();
 
 addTaskButton.addEventListener('click', () => {
     getInput();
@@ -78,6 +104,8 @@ function addTask(x){
     addTaskInput.value = "";
     let newTask = createToDo(x, "", projectInfo.textContent);
     toDoArray.push(newTask);
+    //to save update the saved tasks in localStorage
+    localStorage.setItem("tasks", JSON.stringify(toDoArray));
 }
 
 export function displayTasks(){
@@ -114,6 +142,8 @@ function displayTask(task){
     removeButton.addEventListener("click", () => {
         taskContainer.removeChild(createdTask);
         toDoArray.splice(toDoArray.indexOf(task), 1);
+        //update localStorage when a task is deleted
+        localStorage.setItem("tasks", JSON.stringify(toDoArray));
     });
     console.log(toDoArray)
     createdTask.appendChild(dueDate);

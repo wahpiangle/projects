@@ -1,12 +1,23 @@
 import { clearOnView, projectClickUpdate, displayTasks, removePriorTasks } from "./DOM-manip";
 
-let projectArray = ["Default Project"];
+let projectArray;
 const navBarProjects = document.querySelector(".nav-bar-projects");
 const addProjectInput = document.createElement("input");
 const addProjectConfirmButton = document.createElement("div");
 const addProjectCancelButton = document.createElement("div");
 const projectContainer = document.querySelector(".project-container");
 const addProjectButton = document.querySelector(".add-project-button");
+
+// retrieve the value from localStorage
+const storedValue = localStorage.getItem("project");
+// if there is a stored value, use it; otherwise, use the default value
+if (storedValue) {
+    projectArray = JSON.parse(storedValue);
+} else {
+    projectArray = ["Default Project"];
+    localStorage.setItem("project", JSON.stringify(projectArray));
+}
+
 displayProjects();
 
 addProjectButton.addEventListener("click", () => {
@@ -53,6 +64,8 @@ function addProject(x){
     }
     else{
         projectArray.push(x);
+        //to save the updated projectArray into localStorage 
+        localStorage.setItem("project", JSON.stringify(projectArray));
     }
 }
 
@@ -88,6 +101,8 @@ function displayProject(project){
         projectContainer.removeChild(createdProject);
         projectArray.splice(projectArray.indexOf(project), 1);
         clearOnView(project);
+        //to update the localStorage
+        localStorage.setItem("project", JSON.stringify(projectArray));
     });
     createdProject.appendChild(removeButton);
     projectContainer.appendChild(createdProject);
