@@ -1,0 +1,56 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+
+}
+body{
+    background-color: #282D35;
+}
+* {
+    box-sizing: border-box;
+}
+
+.icon-image{
+    margin: 0 20px;
+    width:48px;
+}
+
+nav{
+    display: flex;
+    background-color: #21222A;
+    color: white;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.page-title{
+    padding: 0 20px;
+    color:aqua
+}
+
+.page-title-2{
+    margin-left: 60%;
+}
+
+main{
+    color:white;
+    padding-left: 20px;
+    background-image: url(./images/React-icon.svg); 
+    filter: grayscale(100%);;
+    background-repeat: no-repeat;
+    background-position: 109%;
+}
+
+.main-title{
+    font-weight: bold;
+}
+
+main > ul > li::marker{
+    font-size: 1.4rem;
+    color: aqua;
+}
+main> ul > li{
+    font-size: 18px;
+    margin-bottom: 2px;
+}
