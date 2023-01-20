@@ -1,0 +1,76 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: "Open-Sans", "Helvetica Neue", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.logo{
+    max-width: 100px;
+}
+
+nav{
+    padding: 20px 20px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.hero-img{
+    width: 50%;
+    min-width: 600px;
+    align-self: center;
+}
+
+.Hero {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img{
+    border-radius: 12px;
+    height: 373.85px;
+    width: 280px;
+    cursor: pointer;
+}
+.bold {
+    font-weight: bold;
+}
+
+.gray {
+    color: #918E9B;
+}
+
+.card-stats{
+    display: flex;
+    align-items: center;
+}
+
+.star-img{
+    height: 14px;
+}
+.card{
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.cards{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.card-badge{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
+}
