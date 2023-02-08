@@ -1,0 +1,24 @@
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.start-title{
+    font-size: 6vh;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color:var(--color-blue)
+}
+
+.start-button{
+    cursor: pointer;
+    background-color: var(--color-blue);
+    color: white;
+    font-size: 2vh;
+    border-radius: 20px;
+    padding: 1.5rem 3rem;
+    border: none;
+}

@@ -1,0 +1,32 @@
+html, body{
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+}
+body > *{
+    height: 100%;
+}
+
+.App{
+    height: 100%;
+}
+.circle{
+    position: absolute;
+    top: -250px;
+    right: -250px;
+    width: 500px;
+    height: 500px;
+    background: rgb(243, 230, 109);
+    clip-path: circle(50.0% at 50% 50%);
+}
+
+.oval{
+    clip-path: ellipse(50% 29% at 50% 50%);
+    position: absolute;
+    bottom: -250px;
+    left: -250px;
+    width: 500px;
+    height: 500px;
+    background: rgb(54, 142, 243);
+}

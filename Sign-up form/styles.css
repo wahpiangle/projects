@@ -50,7 +50,7 @@ body{
 #input-header{
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
 }
 .inputs label{
     font-size: 16px;
@@ -71,7 +71,7 @@ body{
 .inner-input-container span{
     position: absolute;
     left: 0;
-    margin-left: 592px;
+    margin-left: 45.5%;
     margin-right: auto;
     color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
@@ -89,9 +89,9 @@ body{
     background-color: rgb(70,158,153);
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{ 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px rgb(70,158,153) inset !important;
     -webkit-text-fill-color: #fff;
 }
