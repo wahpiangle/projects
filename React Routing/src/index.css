@@ -117,9 +117,51 @@ form button{
   font-size: 1em;
 }
 /* careers list */
+.careers > a {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+  text-decoration: none;
+}
+.careers > a:hover p{
+  color: var(--primary);
+}
+.careers p{
+  margin: 0;
+}
+.careers > a p:last-child{
+  font-size: 0.8em;
+  color: #bbb;
+}
 
+.career-details{
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
 
-/* careers details */
+.breadcrumbs{
+  max-width: 1200px;
+  margin: 1rem 0;
+}
 
+.breadcrumbs >*{
+  display: inline-block;
+  margin-right: 1rem;
+}
 
-/* breadcrumbs */
+.breadcrumbs .crumb::after{
+  content: ">";
+  margin-left: 1rem;
+}
+
+.breadcrumbs .crumb:last-child::after{
+  display: none;
+}
+
+.breadcrumbs .crumb a{
+  color: #ddd;
+}
