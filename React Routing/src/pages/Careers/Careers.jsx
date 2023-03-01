@@ -23,5 +23,15 @@ export const careersLoader = async() => {
         throw Error("Failed to fetch careers");
     }
 
+    //this is for the sake of uploading to the site and not having to run the server
+    if(!res){
+        const localRes = await fetch('/assets/db.json');
+        if(!localRes.ok){
+            throw Error("Failed to fetch careers");
+        }
+        const dataJson = localRes.json();
+        return dataJson;
+    }
+
     return res.json();
 }

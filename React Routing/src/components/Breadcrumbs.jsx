@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom"
 
 export default function Breadcrumbs() {
+    //useLocation hooks provides the breadcrumbs data
     const location = useLocation();
-
     let currentLink = '';
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
@@ -15,7 +15,6 @@ export default function Breadcrumbs() {
         )
         }
         )
-
     return (
         <div className="breadcrumbs">
             {crumbs}
