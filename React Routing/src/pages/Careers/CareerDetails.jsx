@@ -22,20 +22,9 @@ export const careerDetailsLoader = async( {params} ) => {
 
     const res = await fetch('http://localhost:4000/careers/' + id);
 
-    //this is for the sake of uploading to the site and not having to run the server
-    if(!res){
-        const localRes = await fetch('/assets/db.json');
-        if(!localRes.ok){
-            throw Error("Failed to find job requested.");
-        }
-        const dataJson = localRes.json();
-        const career = dataJson.careers.find(career => career.id === id);
-        return career;
-    }
-
     //error handling
     if (!res.ok) {
-        throw Error("Failed to find job requested.");
+        throw Error("Failed to find job requested. Please run json-server at port 4000 and try again.");
     }
 
     return res.json();

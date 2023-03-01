@@ -20,17 +20,7 @@ export const careersLoader = async() => {
 
     //error handling
     if (!res.ok) {
-        throw Error("Failed to fetch careers");
-    }
-
-    //this is for the sake of uploading to the site and not having to run the server
-    if(!res){
-        const localRes = await fetch('/assets/db.json');
-        if(!localRes.ok){
-            throw Error("Failed to fetch careers");
-        }
-        const dataJson = localRes.json();
-        return dataJson;
+        throw Error("Failed to fetch careers. Please run json-server at port 4000 and try again");
     }
 
     return res.json();
