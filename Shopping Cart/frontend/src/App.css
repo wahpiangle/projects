@@ -1,4 +1,57 @@
-body, html{
+*{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'Open Sans', sans-serif;
+}
+
+/*NavBar */
+nav{
+    height: 6rem;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav h2{
+    font-size: 2em;
+    color: white;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav .nav-cart{
+    display: flex;
+    align-items: center;
+}
+.nav-cart .nav-cart-icon{
+    height: 32px;
+    width: auto;
+    color: white;
+}
+
+.nav-cart-quantity{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem .4rem;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid black;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: black;
+    margin-left: -0.5rem;
+    margin-top: -1rem;
+}
+
+.not-found{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
