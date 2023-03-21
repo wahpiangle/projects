@@ -32,7 +32,7 @@ const data = [
                 url: holyPandas3
             }
         ],
-        desc: "Holy Pandas Switches",
+        desc: "Holy Pandas Switches. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
     {
         id: 2,
