@@ -4,11 +4,16 @@ import Home from './components/Home/Home'
 import About from './components/About'
 import Cart from './components/Cart'
 import RootLayout from './layout/RootLayout'
+import ShopLayout from './layout/ShopLayout'
 import NotFound from './components/NotFound/NotFound'
 import Shop from './components/Shop/Shop'
 import Contact from './components/Contact/Contact'
+import Individual from './components/Product/Individual'
+import { useSelector, useDispatch } from 'react-redux'
+import data from './assets/data'
 
 function App() {
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
@@ -16,8 +21,12 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path='*' element={<NotFound />} />
         <Route path="about" element={<About />} />
-        <Route path="shop" element={<Shop />} />
-        <Route path="contact" element={<Contact/>} />
+        <Route path="shop" element={<ShopLayout/>}>
+          <Route index element={<Shop/>} />
+          <Route path=":id" element={<Individual/>} />
+        </Route>
+        <Route path="shop:id" element={<Individual/>} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     ))
   return (

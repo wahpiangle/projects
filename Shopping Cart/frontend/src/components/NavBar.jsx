@@ -1,13 +1,15 @@
 import { AiFillShopping, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
-export default function NavBar() {
+
+export default function NavBar({  }) {
     const [activeComponent, setActiveComponent] = useState('');
     const [menuToggle, setToggleMenu] = useState(false);
 
     function handleNavClick(component) {
         setActiveComponent(component);
     }
+
     return (
         <nav className="navbar">
             <NavLink to='/' onClick={() => handleNavClick()}>
@@ -31,14 +33,14 @@ export default function NavBar() {
                 </li>
             </ul>
             <div className='navbar-smallscreen'>
-                <AiOutlineMenu className='navbar-smallscreen_icon' fontSize={27} onClick={()=>setToggleMenu(state=> !state)}/>
+                <AiOutlineMenu className='navbar-smallscreen_icon' fontSize={27} onClick={() => setToggleMenu(state => !state)} />
                 {menuToggle && <div className='navbar-smallscreen_overlay'>
                     <ul className='overlay-links'>
-                        <AiOutlineClose className='overlay_close' onClick={()=>setToggleMenu(state => !state)}/>
-                        <li onClick={()=>setToggleMenu(state => !state)}><NavLink to='/'>Home</NavLink></li>
-                        <li onClick={()=>setToggleMenu(state => !state)}><NavLink to='/shop'>Shop</NavLink></li>
-                        <li onClick={()=>setToggleMenu(state => !state)}><NavLink to='/about'>About</NavLink></li>
-                        <li onClick={()=>setToggleMenu(state => !state)}><NavLink to='/contact'>Menu</NavLink></li>
+                        <AiOutlineClose className='overlay_close' onClick={() => setToggleMenu(state => !state)} />
+                        <li onClick={() => {setToggleMenu(state => !state); handleNavClick()}}><NavLink to='/'>Home</NavLink></li>
+                        <li onClick={() => {setToggleMenu(state => !state); handleNavClick('shop')}}><NavLink to='/shop'>Shop</NavLink></li>
+                        <li onClick={() => {setToggleMenu(state => !state); handleNavClick('about')}}><NavLink to='/about'>About</NavLink></li>
+                        <li onClick={() => {setToggleMenu(state => !state); handleNavClick('contact')}}><NavLink to='/contact'>Contact</NavLink></li>
                     </ul>
                 </div>}
             </div>
@@ -46,7 +48,7 @@ export default function NavBar() {
                 <div className="nav-cart">
                     <AiFillShopping className="nav-cart-icon" />
                     <span className='nav-cart-quantity'>
-                        <span>5</span>
+                        <span>0</span>
                     </span>
                 </div>
             </NavLink>

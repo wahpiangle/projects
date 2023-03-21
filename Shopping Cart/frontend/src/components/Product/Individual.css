@@ -1,0 +1,18 @@
+.individual-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.individual-title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.individual-product-container{
+    display: flex;
+    justify-content: space-between;
+}

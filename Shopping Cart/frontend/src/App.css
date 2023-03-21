@@ -153,6 +153,12 @@ nav .nav-cart{
         display: none;
     }
 }
+
+.loading-gif{
+    height:32px;
+    width: 32px;
+    object-fit: cover;
+}
 /* Not Found */
 .not-found{
     display:flex;

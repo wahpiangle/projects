@@ -47,7 +47,11 @@
     align-items: flex-start;
     padding-left: 2rem;
 }
-
+@media screen and (max-width: 1150px) {
+    .home{
+        padding: 0 6rem;
+    }
+}
 @media screen and (max-width: 650px) {
     .home{
         padding: 0 2rem;
