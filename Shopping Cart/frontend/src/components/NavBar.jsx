@@ -22,11 +22,6 @@ export default function NavBar({  }) {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/about' onClick={() => handleNavClick('about')}>
-                        <p className={`nav-about ${activeComponent === 'about' ? 'active' : ''}`}>About Us</p>
-                    </NavLink>
-                </li>
-                <li>
                     <NavLink to='/contact' onClick={() => handleNavClick('contact')}>
                         <p className={`nav-contact ${activeComponent === 'contact' ? 'active' : ''}`}>Contact Us</p>
                     </NavLink>
@@ -39,7 +34,6 @@ export default function NavBar({  }) {
                         <AiOutlineClose className='overlay_close' onClick={() => setToggleMenu(state => !state)} />
                         <li onClick={() => {setToggleMenu(state => !state); handleNavClick()}}><NavLink to='/'>Home</NavLink></li>
                         <li onClick={() => {setToggleMenu(state => !state); handleNavClick('shop')}}><NavLink to='/shop'>Shop</NavLink></li>
-                        <li onClick={() => {setToggleMenu(state => !state); handleNavClick('about')}}><NavLink to='/about'>About</NavLink></li>
                         <li onClick={() => {setToggleMenu(state => !state); handleNavClick('contact')}}><NavLink to='/contact'>Contact</NavLink></li>
                     </ul>
                 </div>}
