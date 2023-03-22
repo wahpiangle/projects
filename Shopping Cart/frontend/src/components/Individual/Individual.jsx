@@ -1,6 +1,7 @@
 import { useOutletContext, useParams } from "react-router-dom"
 import './Individual.css'
 import { useState } from "react"
+import MyCarousel from "../Carousel/MyCarousel";
 
 export default function Individual() {
     const products = useOutletContext();
@@ -23,7 +24,7 @@ export default function Individual() {
             <h1 className="individual-title">{product.name}</h1>
             <div className="individual-product-container">
                 <div className="individual-product_image">
-                    <img src={product.image[0].url} />
+                    <MyCarousel images={product.image}/>
                 </div>
                 <div className="individual-product_details">
                     <p className="individual-product_description">{product.desc}</p>
@@ -35,8 +36,9 @@ export default function Individual() {
                         </div>
                         <div className="individual-addtocart">Add to Cart</div>
                     </div>
-
                 </div>
+
+
             </div>
         </div>
     )

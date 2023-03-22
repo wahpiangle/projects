@@ -8,9 +8,7 @@ import ShopLayout from './layout/ShopLayout'
 import NotFound from './components/NotFound/NotFound'
 import Shop from './components/Shop/Shop'
 import Contact from './components/Contact/Contact'
-import Individual from './components/Product/Individual'
-import { useSelector, useDispatch } from 'react-redux'
-import data from './assets/data'
+import Individual from './components/Individual/Individual'
 
 function App() {
 
