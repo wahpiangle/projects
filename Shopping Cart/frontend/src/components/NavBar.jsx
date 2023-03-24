@@ -1,11 +1,12 @@
 import { AiFillShopping, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-export default function NavBar({  }) {
+export default function NavBar() {
     const [activeComponent, setActiveComponent] = useState('');
     const [menuToggle, setToggleMenu] = useState(false);
-
+    const cart = useSelector(state => state.cart.value);
     function handleNavClick(component) {
         setActiveComponent(component);
     }
@@ -42,7 +43,7 @@ export default function NavBar({  }) {
                 <div className="nav-cart">
                     <AiFillShopping className="nav-cart-icon" />
                     <span className='nav-cart-quantity'>
-                        <span>0</span>
+                        <span>{cart.totalItems}</span>
                     </span>
                 </div>
             </NavLink>

@@ -1,8 +1,22 @@
 import './Product.css'
-import { MdAddShoppingCart } from 'react-icons/md';
+import { BsFillCartPlusFill, BsCartCheckFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { addItems } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 
 export default function Product({product}){
+    const dispatch = useDispatch();
+    const [purchased, setPurchased] = useState(false);
+
+    function handleAddToCart(product){
+        dispatch(addItems({product, quantity:1}));
+        setPurchased(true);
+        setTimeout(() =>{
+            setPurchased(false);
+        },2000)
+    }
+
     return (
         <div className="product-card">
             <Link to={`/shop/${product.id}`} state={product.id}>
@@ -13,7 +27,8 @@ export default function Product({product}){
                 </div>
             </Link>
             <div className='product-addcart-container'>
-                <MdAddShoppingCart className='product-addcart'/>
+                {!purchased && <BsFillCartPlusFill className='product-addcart' onClick={()=>{handleAddToCart(product)}}/>}
+                {purchased &&<BsCartCheckFill className='product-addcart_purchased' />}
             </div>
         </div>
     )

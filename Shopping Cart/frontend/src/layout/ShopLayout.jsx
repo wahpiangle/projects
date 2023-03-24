@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import data from "../assets/data"
 import { useSelector, useDispatch } from 'react-redux'
 import { fetch } from '../redux/productSlice'

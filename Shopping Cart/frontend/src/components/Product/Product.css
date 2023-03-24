@@ -39,3 +39,10 @@
     right: 2rem;
     bottom: 2rem;
 }
+
+.product-addcart_purchased{
+    position: relative;
+    right: 2rem;
+    bottom: 2rem;
+    cursor:default;
+}

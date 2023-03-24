@@ -31,8 +31,7 @@ nav a{
 nav .nav-links{
     list-style: none;
     display: flex;
-    margin: 0 2rem;
-    padding: 0 2rem;
+    padding: 0 20rem;
 }
 
 li a{

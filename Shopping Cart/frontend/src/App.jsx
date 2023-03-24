@@ -25,6 +25,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
       </Route>
     ))
+
   return (
     <RouterProvider router={router} />
   )
