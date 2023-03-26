@@ -38,7 +38,7 @@ export default function Contact() {
             </div>
             <div className='contact-location'>
                 <h1 className='contact-location-title'>Our Offices</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.5923421162533!2d-88.19144391763025!3d43.02653439232117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805a8417d911335%3A0xa1a7bce4b4070065!2s1923%20Stardust%20Dr%2C%20Waukesha%2C%20WI%2053186%2C%20USA!5e0!3m2!1sen!2smy!4v1679118877182!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.5923421162533!2d-88.19144391763025!3d43.02653439232117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805a8417d911335%3A0xa1a7bce4b4070065!2s1923%20Stardust%20Dr%2C%20Waukesha%2C%20WI%2053186%2C%20USA!5e0!3m2!1sen!2smy!4v1679118877182!5m2!1sen!2smy" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 <h1 className='contact-location-office'>Random Location I pinned on Google Maps</h1>
                 <p className='contact-location-address'>123, Light St. Gasper Town, Ipvisem, Mars</p>
             </div>

@@ -1,7 +1,7 @@
 import './App.css'
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Home from './components/Home/Home'
-import Cart from './components/Cart'
+import Cart from './components/Cart/Cart'
 import RootLayout from './layout/RootLayout'
 import ShopLayout from './layout/ShopLayout'
 import NotFound from './components/NotFound/NotFound'

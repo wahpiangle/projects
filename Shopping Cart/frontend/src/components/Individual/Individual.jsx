@@ -13,6 +13,7 @@ export default function Individual() {
     const dispatch = useDispatch();
     const [purchased, setPurchased] = useState(false);
 
+
     function handleQuantity(e) {
         setQuantity(e.target.value);
     }
