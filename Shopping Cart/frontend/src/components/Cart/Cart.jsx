@@ -44,7 +44,14 @@ export default function Cart(){
                     ))}
                 </div>
                 <div className='cart-total'>
-                    Cart Total
+                    <div className='cart-total-title'>Cart total</div>
+                    <div className='cart-total-items-container'>
+                        <div className='cart-total-subtitle'>Subtotal</div>
+                        <div className='cart-total-subtotal'>${cart.totalPrice}</div>
+                        <div className='cart-total-subtitle'>Shipping</div>
+                        <div className='cart-total-shipping'>No Shipping Options are available</div>
+                    </div>
+                    <div className='cart-total-checkout'>Proceed to Checkout</div>
                 </div>
             </div>
         </div>

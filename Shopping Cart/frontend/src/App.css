@@ -51,7 +51,7 @@ nav p.active{
     border-bottom: 1px solid white;
 }
 
-nav .nav-shop, .nav-about, .nav-contact{
+nav .nav-shop, .nav-contact{
     white-space: nowrap;
     padding: 1rem;
     border-bottom: 1px solid rgb(32, 32, 32);
@@ -156,10 +156,11 @@ nav .nav-cart{
 @media screen and (max-width: 1150px){
     nav h2{
         padding: 1rem;
+        margin-right:1rem;
         font-size: 1.8rem;
     }
     nav .nav-cart{
-        margin-right:0;
+        margin-right: 1rem;
     }
 }
 
