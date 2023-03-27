@@ -8,6 +8,7 @@ import NotFound from './components/NotFound/NotFound'
 import Shop from './components/Shop/Shop'
 import Contact from './components/Contact/Contact'
 import Individual from './components/Individual/Individual'
+import { useEffect } from 'react'
 
 function App() {
 
