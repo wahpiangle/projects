@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { AiFillGithub } from 'react-icons/ai';
 import { images } from '../../constants';
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 import { FooterOverlay, Newsletter} from '../../components';
@@ -36,7 +36,9 @@ const Footer = () => (
       </div>
     </div>
     <div className='footer__copyright'>
-      <p className='p__opensans'><a href='https://github.com/wahpiangle/projects/'>Quan Ming @ 2023</a></p>
+      <p className='p__opensans'>
+        <a href='https://github.com/wahpiangle/projects/tree/main/Gericht'>Source Code <AiFillGithub className='github-icon'/></a>
+      </p>
     </div>
   </div>
 );
